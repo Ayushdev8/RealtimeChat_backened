@@ -25,7 +25,8 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer {
         System.out.println("Registering WebSocket endpoint");
         registry
                 .addEndpoint("/ws")
-                .setAllowedOriginPatterns("*");// replace with actual frontened Url for production
+                .setAllowedOriginPatterns("https://realtime-chat-frontened.vercel.app",
+                        "http://localhost:3000");// replace with actual frontened Url for production
     }
 
     @Override
